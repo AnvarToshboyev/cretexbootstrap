@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>createx</title>
+  </head>
+
+  <body>
+    <!-- modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Register</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form class="row g-3">
+              <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail4" />
+              </div>
+              <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="inputPassword4"
+                />
+              </div>
+              <div class="col-12">
+                <label for="inputAddress" class="form-label">Address</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputAddress"
+                  placeholder="1234 Main St"
+                />
+              </div>
+              <div class="col-12">
+                <label for="inputAddress2" class="form-label">Address 2</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputAddress2"
+                  placeholder="Apartment, studio, or floor"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="inputCity" class="form-label">City</label>
+                <input type="text" class="form-control" id="inputCity" />
+              </div>
+              <div class="col-md-4">
+                <label for="inputState" class="form-label">State</label>
+                <select id="inputState" class="form-select">
+                  <option selected>Choose...</option>
+                  <option>...</option>
+                </select>
+              </div>
+              <div class="col-md-2">
+                <label for="inputZip" class="form-label">Zip</label>
+                <input type="text" class="form-control" id="inputZip" />
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="gridCheck"
+                  />
+                  <label class="form-check-label" for="gridCheck">
+                    Check me out
+                  </label>
+                </div>
+              </div>
+              <div class="col-12 modal-footer">
+                <button type="submit" class="bgOrange">Sign in</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- header-starting -->
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="./img/logo.svg" alt="" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >About Us</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Courses</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contacts</a>
+              </li>
+            </ul>
+            <div class="rightMenu">
+              <button class="bgOrange">Get consultation</button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                <i class="fa fa-user"></i>
+                Log in / Register
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-title">
+        <div class="container">
+          <div class="row justify-content-between align-items-center">
+            <div class="col-lg-5">
+              <div class="play">
+                <div class="playIcons">
+                  <button><i class="fa fa-play"></i></button>
+                </div>
+                <p>Play showreel</p>
+              </div>
+              <h1>Enjoy studying with Createx Online Courses</h1>
+              <div class="btnGroup">
+                <button>About us</button>
+                <button class="bgOrange">Explore courses</button>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <img src="./img/illustration.svg" alt="" />
+            </div>
+          </div>
+          <div class="row justify-content-between">
+            <div class="col-auto">
+              <div class="box">
+                <h3>1200</h3>
+                <p>Students graduated</p>
+              </div>
+            </div>
+            <div class="col-auto">
+              <div class="box">
+                <h3>84</h3>
+                <p>Completed courses</p>
+              </div>
+            </div>
+            <div class="col-auto">
+              <div class="box">
+                <h3>16</h3>
+                <p>Qualified tutors</p>
+              </div>
+            </div>
+            <div class="col-auto">
+              <div class="box">
+                <h3>5</h3>
+                <p>Years of experience</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- main-starting -->
+
+    <main>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-lg-6">
+            <img src="./img/image (11).png" alt="" />
+          </div>
+          <div class="col-lg-5">
+            <p class="text">Who we are</p>
+            <h2 class="title">Why Createx?</h2>
+            <div class="list">
+              <div class="listItem">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_2492_14491)">
+                    <path
+                      d="M7.99984 15.3337C12.0432 15.3337 15.3332 12.044 15.3332 8.00033C15.3332 7.30238 15.2357 6.61458 15.0428 5.95588C14.9478 5.63197 14.6096 5.44592 14.2848 5.54096C13.9606 5.6357 13.7751 5.97512 13.8698 6.29903C14.0296 6.84629 14.1109 7.4189 14.1109 8.00033C14.1109 11.3699 11.3695 14.1114 7.99984 14.1114C4.63022 14.1114 1.88873 11.3699 1.88873 8.00033C1.88873 4.63071 4.63022 1.88921 7.99984 1.88921C9.22445 1.88921 10.4027 2.24729 11.4071 2.92449C11.6866 3.11323 12.0668 3.03908 12.2552 2.75948C12.4438 2.47959 12.3703 2.09973 12.0904 1.91115C10.8834 1.09728 9.46898 0.666992 7.99984 0.666992C3.95645 0.666992 0.666504 3.95664 0.666504 8.00033C0.666504 12.044 3.95645 15.3337 7.99984 15.3337Z"
+                      fill="#FF3F3A"
+                    />
+                    <path
+                      d="M14.8617 1.52885L7.99971 8.3905L5.8044 6.19552C5.54399 5.93526 5.12211 5.93526 4.86169 6.19552C4.60144 6.45593 4.60144 6.87781 4.86169 7.13822L7.52836 9.80489C7.65873 9.93526 7.82898 10.0002 7.99971 10.0002C8.17045 10.0002 8.3407 9.93526 8.47107 9.80489L15.8044 2.47156C16.0647 2.21114 16.0647 1.78927 15.8044 1.52885C15.544 1.2686 15.1221 1.2686 14.8617 1.52885Z"
+                      fill="#FF3F3A"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_2492_14491">
+                      <rect width="16" height="16" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <p>
+                  A fermentum in morbi pretium aliquam adipiscing donec tempus.
+                </p>
+              </div>
+              <div class="listItem">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_2492_14491)">
+                    <path
+                      d="M7.99984 15.3337C12.0432 15.3337 15.3332 12.044 15.3332 8.00033C15.3332 7.30238 15.2357 6.61458 15.0428 5.95588C14.9478 5.63197 14.6096 5.44592 14.2848 5.54096C13.9606 5.6357 13.7751 5.97512 13.8698 6.29903C14.0296 6.84629 14.1109 7.4189 14.1109 8.00033C14.1109 11.3699 11.3695 14.1114 7.99984 14.1114C4.63022 14.1114 1.88873 11.3699 1.88873 8.00033C1.88873 4.63071 4.63022 1.88921 7.99984 1.88921C9.22445 1.88921 10.4027 2.24729 11.4071 2.92449C11.6866 3.11323 12.0668 3.03908 12.2552 2.75948C12.4438 2.47959 12.3703 2.09973 12.0904 1.91115C10.8834 1.09728 9.46898 0.666992 7.99984 0.666992C3.95645 0.666992 0.666504 3.95664 0.666504 8.00033C0.666504 12.044 3.95645 15.3337 7.99984 15.3337Z"
+                      fill="#FF3F3A"
+                    />
+                    <path
+                      d="M14.8617 1.52885L7.99971 8.3905L5.8044 6.19552C5.54399 5.93526 5.12211 5.93526 4.86169 6.19552C4.60144 6.45593 4.60144 6.87781 4.86169 7.13822L7.52836 9.80489C7.65873 9.93526 7.82898 10.0002 7.99971 10.0002C8.17045 10.0002 8.3407 9.93526 8.47107 9.80489L15.8044 2.47156C16.0647 2.21114 16.0647 1.78927 15.8044 1.52885C15.544 1.2686 15.1221 1.2686 14.8617 1.52885Z"
+                      fill="#FF3F3A"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_2492_14491">
+                      <rect width="16" height="16" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <p>Vulputate placerat amet pulvinar lorem nisl.</p>
+              </div>
+              <div class="listItem">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_2492_14491)">
+                    <path
+                      d="M7.99984 15.3337C12.0432 15.3337 15.3332 12.044 15.3332 8.00033C15.3332 7.30238 15.2357 6.61458 15.0428 5.95588C14.9478 5.63197 14.6096 5.44592 14.2848 5.54096C13.9606 5.6357 13.7751 5.97512 13.8698 6.29903C14.0296 6.84629 14.1109 7.4189 14.1109 8.00033C14.1109 11.3699 11.3695 14.1114 7.99984 14.1114C4.63022 14.1114 1.88873 11.3699 1.88873 8.00033C1.88873 4.63071 4.63022 1.88921 7.99984 1.88921C9.22445 1.88921 10.4027 2.24729 11.4071 2.92449C11.6866 3.11323 12.0668 3.03908 12.2552 2.75948C12.4438 2.47959 12.3703 2.09973 12.0904 1.91115C10.8834 1.09728 9.46898 0.666992 7.99984 0.666992C3.95645 0.666992 0.666504 3.95664 0.666504 8.00033C0.666504 12.044 3.95645 15.3337 7.99984 15.3337Z"
+                      fill="#FF3F3A"
+                    />
+                    <path
+                      d="M14.8617 1.52885L7.99971 8.3905L5.8044 6.19552C5.54399 5.93526 5.12211 5.93526 4.86169 6.19552C4.60144 6.45593 4.60144 6.87781 4.86169 7.13822L7.52836 9.80489C7.65873 9.93526 7.82898 10.0002 7.99971 10.0002C8.17045 10.0002 8.3407 9.93526 8.47107 9.80489L15.8044 2.47156C16.0647 2.21114 16.0647 1.78927 15.8044 1.52885C15.544 1.2686 15.1221 1.2686 14.8617 1.52885Z"
+                      fill="#FF3F3A"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_2492_14491">
+                      <rect width="16" height="16" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <p>
+                  Consequat feugiat habitant gravida quisque elit bibendum id
+                  adipiscing sed.
+                </p>
+              </div>
+              <div class="listItem">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_2492_14491)">
+                    <path
+                      d="M7.99984 15.3337C12.0432 15.3337 15.3332 12.044 15.3332 8.00033C15.3332 7.30238 15.2357 6.61458 15.0428 5.95588C14.9478 5.63197 14.6096 5.44592 14.2848 5.54096C13.9606 5.6357 13.7751 5.97512 13.8698 6.29903C14.0296 6.84629 14.1109 7.4189 14.1109 8.00033C14.1109 11.3699 11.3695 14.1114 7.99984 14.1114C4.63022 14.1114 1.88873 11.3699 1.88873 8.00033C1.88873 4.63071 4.63022 1.88921 7.99984 1.88921C9.22445 1.88921 10.4027 2.24729 11.4071 2.92449C11.6866 3.11323 12.0668 3.03908 12.2552 2.75948C12.4438 2.47959 12.3703 2.09973 12.0904 1.91115C10.8834 1.09728 9.46898 0.666992 7.99984 0.666992C3.95645 0.666992 0.666504 3.95664 0.666504 8.00033C0.666504 12.044 3.95645 15.3337 7.99984 15.3337Z"
+                      fill="#FF3F3A"
+                    />
+                    <path
+                      d="M14.8617 1.52885L7.99971 8.3905L5.8044 6.19552C5.54399 5.93526 5.12211 5.93526 4.86169 6.19552C4.60144 6.45593 4.60144 6.87781 4.86169 7.13822L7.52836 9.80489C7.65873 9.93526 7.82898 10.0002 7.99971 10.0002C8.17045 10.0002 8.3407 9.93526 8.47107 9.80489L15.8044 2.47156C16.0647 2.21114 16.0647 1.78927 15.8044 1.52885C15.544 1.2686 15.1221 1.2686 14.8617 1.52885Z"
+                      fill="#FF3F3A"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_2492_14491">
+                      <rect width="16" height="16" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <p>Etiam duis lobortis in fames ultrices commodo nibh.</p>
+              </div>
+              <div class="listItem">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_2492_14491)">
+                    <path
+                      d="M7.99984 15.3337C12.0432 15.3337 15.3332 12.044 15.3332 8.00033C15.3332 7.30238 15.2357 6.61458 15.0428 5.95588C14.9478 5.63197 14.6096 5.44592 14.2848 5.54096C13.9606 5.6357 13.7751 5.97512 13.8698 6.29903C14.0296 6.84629 14.1109 7.4189 14.1109 8.00033C14.1109 11.3699 11.3695 14.1114 7.99984 14.1114C4.63022 14.1114 1.88873 11.3699 1.88873 8.00033C1.88873 4.63071 4.63022 1.88921 7.99984 1.88921C9.22445 1.88921 10.4027 2.24729 11.4071 2.92449C11.6866 3.11323 12.0668 3.03908 12.2552 2.75948C12.4438 2.47959 12.3703 2.09973 12.0904 1.91115C10.8834 1.09728 9.46898 0.666992 7.99984 0.666992C3.95645 0.666992 0.666504 3.95664 0.666504 8.00033C0.666504 12.044 3.95645 15.3337 7.99984 15.3337Z"
+                      fill="#FF3F3A"
+                    />
+                    <path
+                      d="M14.8617 1.52885L7.99971 8.3905L5.8044 6.19552C5.54399 5.93526 5.12211 5.93526 4.86169 6.19552C4.60144 6.45593 4.60144 6.87781 4.86169 7.13822L7.52836 9.80489C7.65873 9.93526 7.82898 10.0002 7.99971 10.0002C8.17045 10.0002 8.3407 9.93526 8.47107 9.80489L15.8044 2.47156C16.0647 2.21114 16.0647 1.78927 15.8044 1.52885C15.544 1.2686 15.1221 1.2686 14.8617 1.52885Z"
+                      fill="#FF3F3A"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_2492_14491">
+                      <rect width="16" height="16" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <p>Tincidunt sagittis neque sem ac eget.</p>
+              </div>
+              <div class="listItem">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_2492_14491)">
+                    <path
+                      d="M7.99984 15.3337C12.0432 15.3337 15.3332 12.044 15.3332 8.00033C15.3332 7.30238 15.2357 6.61458 15.0428 5.95588C14.9478 5.63197 14.6096 5.44592 14.2848 5.54096C13.9606 5.6357 13.7751 5.97512 13.8698 6.29903C14.0296 6.84629 14.1109 7.4189 14.1109 8.00033C14.1109 11.3699 11.3695 14.1114 7.99984 14.1114C4.63022 14.1114 1.88873 11.3699 1.88873 8.00033C1.88873 4.63071 4.63022 1.88921 7.99984 1.88921C9.22445 1.88921 10.4027 2.24729 11.4071 2.92449C11.6866 3.11323 12.0668 3.03908 12.2552 2.75948C12.4438 2.47959 12.3703 2.09973 12.0904 1.91115C10.8834 1.09728 9.46898 0.666992 7.99984 0.666992C3.95645 0.666992 0.666504 3.95664 0.666504 8.00033C0.666504 12.044 3.95645 15.3337 7.99984 15.3337Z"
+                      fill="#FF3F3A"
+                    />
+                    <path
+                      d="M14.8617 1.52885L7.99971 8.3905L5.8044 6.19552C5.54399 5.93526 5.12211 5.93526 4.86169 6.19552C4.60144 6.45593 4.60144 6.87781 4.86169 7.13822L7.52836 9.80489C7.65873 9.93526 7.82898 10.0002 7.99971 10.0002C8.17045 10.0002 8.3407 9.93526 8.47107 9.80489L15.8044 2.47156C16.0647 2.21114 16.0647 1.78927 15.8044 1.52885C15.544 1.2686 15.1221 1.2686 14.8617 1.52885Z"
+                      fill="#FF3F3A"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_2492_14491">
+                      <rect width="16" height="16" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <p>
+                  Ultricies amet justo et eget quisque purus vulputate dapibus
+                  tortor.
+                </p>
+              </div>
+            </div>
+            <button class="bgOrange">More about us</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- section-starting -->
+
+    <section class="courses">
+      <div class="container">
+        <p class="text">Enjoy your studying!</p>
+        <h2 class="title">Our online courses</h2>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="home-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#home"
+              type="button"
+              role="tab"
+              aria-controls="home"
+              aria-selected="true"
+            >
+              All <span>17</span>
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="profile-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#profile"
+              type="button"
+              role="tab"
+              aria-controls="profile"
+              aria-selected="false"
+            >
+              Marketing <span>4</span>
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="contact-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#contact"
+              type="button"
+              role="tab"
+              aria-controls="contact"
+              aria-selected="false"
+            >
+              Management <span>3</span>
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="contact-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#recruting"
+              type="button"
+              role="tab"
+              aria-controls="recruting"
+              aria-selected="false"
+            >
+              HR & Recruting
+              <span>5</span>
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="contact-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#design"
+              type="button"
+              role="tab"
+              aria-controls="design"
+              aria-selected="false"
+            >
+              Design
+              <span>2</span>
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="contact-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#development"
+              type="button"
+              role="tab"
+              aria-controls="development"
+              aria-selected="false"
+            >
+              Development
+              <span>3</span>
+            </button>
+          </li>
+          <form action="">
+            <input type="text" placeholder="Search course..." />
+            <button><i class="fa fa-search"></i></button>
+          </form>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div
+            class="tab-pane fade show active"
+            id="home"
+            role="tabpanel"
+            aria-labelledby="home-tab"
+          >
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="profile"
+            role="tabpanel"
+            aria-labelledby="profile-tab"
+          >
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$200</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="contact"
+            role="tabpanel"
+            aria-labelledby="contact-tab"
+          >
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$300</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="recruting"
+            role="tabpanel"
+            aria-labelledby="contact-tab"
+          >
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$400</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="design"
+            role="tabpanel"
+            aria-labelledby="contact-tab"
+          >
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$500</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="development"
+            role="tabpanel"
+            aria-labelledby="contact-tab"
+          >
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$600</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="box">
+                    <img src="./img/image.png" alt="" />
+                    <div class="textBlock">
+                      <p>Marketing</p>
+                      <h4>The Ultimate Google Ads Training Course</h4>
+                      <p><span>$100</span> | by Jerome Bell</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="program">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p class="text">Course program</p>
+            <h2 class="title">What will you learn</h2>
+          </div>
+          <div class="col-lg-6">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    <span>Lesson 1.</span>
+                    Aliquet lectus urna viverra in odio.
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec
+                    pulvinar aliquet donec enim, ornare. Lacus facilisi
+                    curabitur turpis varius mauris. Nisi, tempus risus, odio mi
+                    suscipit sed. Curabitur faucibus porttitor quis sem lacus,
+                    arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    <span>Lesson 2.</span>
+                    Orci commodo, viverra orci mollis ut euismod.
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTwo"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec
+                    pulvinar aliquet donec enim, ornare. Lacus facilisi
+                    curabitur turpis varius mauris. Nisi, tempus risus, odio mi
+                    suscipit sed. Curabitur faucibus porttitor quis sem lacus,
+                    arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    <span>Lesson 3.</span>
+                    Sagittis vitae facilisi rutrum amet mauris quisque vel.
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingThree"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec
+                    pulvinar aliquet donec enim, ornare. Lacus facilisi
+                    curabitur turpis varius mauris. Nisi, tempus risus, odio mi
+                    suscipit sed. Curabitur faucibus porttitor quis sem lacus,
+                    arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour"
+                    aria-expanded="false"
+                    aria-controls="collapseFour"
+                  >
+                    <span>Lesson 4.</span>
+                    Sagittis vitae facilisi rutrum amet mauris quisque vel.
+                  </button>
+                </h2>
+                <div
+                  id="collapseFour"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingFour"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec
+                    pulvinar aliquet donec enim, ornare. Lacus facilisi
+                    curabitur turpis varius mauris. Nisi, tempus risus, odio mi
+                    suscipit sed. Curabitur faucibus porttitor quis sem lacus,
+                    arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne1">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne1"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    <span>Lesson 1.</span>
+                    Aliquet lectus urna viverra in odio.
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne1"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="headingOne1"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec
+                    pulvinar aliquet donec enim, ornare. Lacus facilisi
+                    curabitur turpis varius mauris. Nisi, tempus risus, odio mi
+                    suscipit sed. Curabitur faucibus porttitor quis sem lacus,
+                    arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    <span>Lesson 2.</span>
+                    Orci commodo, viverra orci mollis ut euismod.
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTwo"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec
+                    pulvinar aliquet donec enim, ornare. Lacus facilisi
+                    curabitur turpis varius mauris. Nisi, tempus risus, odio mi
+                    suscipit sed. Curabitur faucibus porttitor quis sem lacus,
+                    arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    <span>Lesson 3.</span>
+                    Sagittis vitae facilisi rutrum amet mauris quisque vel.
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingThree"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec
+                    pulvinar aliquet donec enim, ornare. Lacus facilisi
+                    curabitur turpis varius mauris. Nisi, tempus risus, odio mi
+                    suscipit sed. Curabitur faucibus porttitor quis sem lacus,
+                    arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour"
+                    aria-expanded="false"
+                    aria-controls="collapseFour"
+                  >
+                    <span>Lesson 4.</span>
+                    Sagittis vitae facilisi rutrum amet mauris quisque vel.
+                  </button>
+                </h2>
+                <div
+                  id="collapseFour"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingFour"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec
+                    pulvinar aliquet donec enim, ornare. Lacus facilisi
+                    curabitur turpis varius mauris. Nisi, tempus risus, odio mi
+                    suscipit sed. Curabitur faucibus porttitor quis sem lacus,
+                    arcu feugiat facilisis. Commodo nunc orci vitae accumsan id.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 text-center">
+            <img src="./img/01.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

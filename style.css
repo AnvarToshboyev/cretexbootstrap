@@ -1,0 +1,452 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+/* universal-codes */
+
+button.bgOrange {
+  padding: 0px 40px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 52px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  background: linear-gradient(55.95deg, #ff3f3a 0%, #f75e05 100%);
+}
+
+p.text {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 1px;
+  color: rgba(30, 33, 44, 1);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h2.title {
+  font-size: 46px;
+  font-weight: 900;
+  line-height: 60px;
+  color: rgba(30, 33, 44, 1);
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.btn-check:focus + .btn-primary,
+.btn-primary:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+/* header-starting */
+
+header {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 80px;
+  background: url("./img/background.png") no-repeat center / cover;
+}
+
+header .navbar {
+  padding: 0;
+}
+
+header .navbar .navbar-brand {
+  padding: 0;
+  margin: 0;
+  margin-right: 60px;
+}
+
+header .navbar .collapse .navbar-nav .nav-item {
+  margin-right: 40px;
+}
+
+header .navbar .collapse .navbar-nav .nav-item .nav-link {
+  padding: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(66, 69, 81, 1);
+  line-height: 26px;
+}
+
+header .navbar .rightMenu button:last-of-type {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #424551;
+  border: none;
+  background-color: transparent;
+  margin-left: 38px;
+}
+
+header .navbar .rightMenu button:last-of-type .fa {
+  margin-right: 10px;
+  font-weight: 400;
+  font-size: 17px;
+}
+
+header .header-title {
+  width: 100%;
+  padding-top: 128px;
+}
+
+header .header-title .play {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+}
+
+header .header-title .play .playIcons {
+  width: 84px;
+  height: 84px;
+  background-color: rgba(255, 63, 58, 0.12);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .header-title .play .playIcons button {
+  border: none;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  background-color: #ff3f3a;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .header-title .play p {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  color: rgba(30, 33, 44, 1);
+  margin-bottom: 0px;
+}
+
+header .header-title h1 {
+  font-size: 64px;
+  font-weight: 900;
+  color: rgba(30, 33, 44, 1);
+  line-height: 83px;
+  letter-spacing: 1px;
+  margin-bottom: 60px;
+}
+
+header .header-title .btnGroup {
+  display: flex;
+}
+
+header .header-title .btnGroup button:first-of-type {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 52px;
+  letter-spacing: 0.5px;
+  background: linear-gradient(55.95deg, #ff3f3a 0%, #f75e05 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  padding: 0px 40px;
+  border: 1px solid rgba(255, 63, 58, 1);
+  border-radius: 4px;
+  margin-right: 24px;
+}
+
+header .header-title .box {
+  margin-top: 190px;
+  display: flex;
+  align-items: center;
+}
+
+header .header-title .box:not(.col-auto:first-of-type .box)::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ff3f3a;
+  margin-right: 60px;
+}
+
+header .header-title .box h3 {
+  font-size: 46px;
+  font-weight: 900;
+  line-height: 60px;
+  margin-right: 12px;
+  margin-bottom: 0px;
+}
+
+header .header-title .box p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  margin: 0;
+}
+/* main-starting */
+
+main {
+  width: 100%;
+  padding: 180px 0px;
+}
+
+main .list {
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+main .list .listItem {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+main .list .listItem svg {
+  margin-right: 10px;
+  width: 15px !important;
+  height: 15px !important;
+}
+
+main .list .listItem p {
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 16px;
+  width: 358px;
+  line-height: 26px;
+  color: rgba(66, 69, 81, 1);
+}
+
+main img {
+  width: 100%;
+  height: 100%;
+}
+/* section-starting */
+
+section.courses {
+  width: 100%;
+  text-align: center;
+}
+
+section.courses .nav-tabs {
+  border: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 70px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+section.courses .nav-tabs .nav-link {
+  border: none;
+  padding: 10px 20px;
+  margin-right: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+  color: rgba(154, 156, 165, 1);
+  display: block;
+  position: relative;
+}
+
+section.courses .nav-tabs .nav-link span {
+  position: absolute;
+  top: 0px;
+  font-size: 10px;
+  font-weight: 900;
+  right: 10px;
+}
+
+section.courses .nav-tabs .nav-item.show .nav-link,
+section.courses .nav-tabs .nav-link.active {
+  outline: 1px solid rgba(255, 63, 58, 1);
+  color: rgba(255, 63, 58, 1);
+  border-radius: 4px;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+  color: black;
+}
+
+section.courses .nav-tabs form {
+  position: relative;
+  width: 315px;
+}
+
+section.courses .nav-tabs form input {
+  padding: 11px 16px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: gray;
+  width: 100%;
+}
+
+section.courses .nav-tabs form button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  border: none;
+  background-color: transparent;
+  color: gray;
+}
+
+section.courses .box {
+  text-align: left;
+  border: 1px solid #e5e8ed;
+  box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08),
+    0px 30px 24px -10px rgba(154, 156, 165, 0.05),
+    0px 12px 10px -6px rgba(154, 156, 165, 0.04),
+    0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+section.courses .box img {
+  width: 100%;
+}
+
+section.courses .box p:first-of-type {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  padding: 0px 8px;
+  background-color: rgba(3, 206, 164, 1);
+  text-align: left !important;
+  margin-top: 24px;
+  color: white;
+  border-radius: 4px;
+}
+
+section.courses .box h4 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  color: rgba(30, 33, 44, 1);
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+section.courses .box p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  color: rgba(120, 122, 128, 1);
+}
+
+section.courses .box .textBlock {
+  padding: 0px 24px;
+  padding-bottom: 24px;
+}
+
+section.courses .box p:last-of-type span {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+  color: #ff3f3a;
+}
+
+section.program {
+  width: 100%;
+  margin-top: 180px;
+}
+
+section.program .accordion {
+  margin-top: 60px;
+}
+
+section.program .accordion .accordion-item {
+  border: none;
+  border-radius: 0px;
+}
+
+section.program .accordion .accordion-item .accordion-button:not(.collapsed) {
+  background-color: transparent;
+  box-shadow: unset;
+}
+
+section.program .accordion .accordion-item .accordion-button {
+  position: relative;
+}
+
+section.program .accordion .accordion-item .accordion-button:focus {
+  border: none;
+  box-shadow: none;
+}
+
+.accordion-button::after {
+  background-image: none;
+  position: absolute;
+  left: 20px;
+  width: 18px;
+  transition: 0.3s;
+  height: 2px;
+  background-color: rgba(255, 63, 58, 1);
+  visibility: hidden !important;
+}
+
+.accordion-button:not(.collapsed)::after {
+  visibility: visible !important;
+  transform: rotate(90deg);
+  transition: 0.3s;
+}
+
+.accordion-button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 49%;
+  transform: rotate(0deg);
+  left: 20px;
+  width: 18px;
+  height: 2px;
+  background-color: rgba(255, 63, 58, 1);
+}
+
+section.program .accordion .accordion-item .accordion-button {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  padding: 12px 0;
+  color: rgba(30, 33, 44, 1);
+}
+
+section.program .accordion .accordion-item .accordion-button span {
+  margin-left: 60px;
+  color: rgba(255, 63, 58, 1);
+  margin-right: 10px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+section.program .accordion .accordion-item .accordion-body {
+  padding: 0px;
+  padding-left: 60px;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: rgba(66, 69, 81, 1);
+}
